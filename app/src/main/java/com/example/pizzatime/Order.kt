@@ -3,6 +3,7 @@ package com.example.pizzatime
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -11,6 +12,9 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.example.pizzatime.ui.theme.PizzaTimeTheme
 import java.io.Serializable
@@ -40,8 +44,7 @@ class Order : ComponentActivity() {
 @Composable
 fun ShowOrder(items: ArrayList<Item>, sum: Serializable?) {
 
-    Column() {
-        Spacer(modifier = Modifier.height(40.dp))
+    Column(modifier = Modifier.padding(25.dp).border(5.dp, Color.Black, RectangleShape).padding(10.dp)) {
 
         Text(text = "Your order is: ")
 
@@ -51,8 +54,7 @@ fun ShowOrder(items: ArrayList<Item>, sum: Serializable?) {
             }
         }
 
-        Spacer(modifier = Modifier.height(40.dp))
-
         Text(text = "Your total sum is: " + sum)
+
     }
 }

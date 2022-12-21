@@ -42,7 +42,7 @@ class Menu : ComponentActivity() {
 
                     val context = LocalContext.current
 
-                    var OrderList = MenuList.getItems()
+                    val OrderList = MenuList.getItems()
 
                     Column(modifier = Modifier.fillMaxSize(), horizontalAlignment = Alignment.CenterHorizontally) {
                         Text(text = "Menu",modifier = Modifier.padding(20.dp), fontWeight = FontWeight.Bold, fontSize = 40.sp, fontFamily = FontFamily.Cursive)
@@ -97,7 +97,7 @@ fun ColumnScope.DrinksList(OrderList: ArrayList<Item>) {
             .verticalScroll(rememberScrollState())
             .weight(1f, false)
     ) {
-        Row(modifier = Modifier.wrapContentWidth()) {
+        Row(horizontalArrangement = Arrangement.Center) {
             Text(
                 text = "Cola Drink 1$",
                 fontSize = 20.sp,
@@ -115,7 +115,7 @@ fun ColumnScope.DrinksList(OrderList: ArrayList<Item>) {
                 Text(text = "Add")
             }
         }
-        Row() {
+        Row(horizontalArrangement = Arrangement.Center) {
             Text(
                 text = "Orange Juice 1$",
                 fontSize = 20.sp,
@@ -133,7 +133,7 @@ fun ColumnScope.DrinksList(OrderList: ArrayList<Item>) {
                 Text(text = "Add")
             }
         }
-        Row() {
+        Row(horizontalArrangement = Arrangement.Center) {
             Text(
                 text = "Lemonade Drink 1$",
                 fontSize = 20.sp,
@@ -151,7 +151,7 @@ fun ColumnScope.DrinksList(OrderList: ArrayList<Item>) {
                 Text(text = "Add")
             }
         }
-        Row() {
+        Row(horizontalArrangement = Arrangement.Center) {
             Text(
                 text = "Sparkling Water 1$",
                 fontSize = 20.sp,
@@ -169,7 +169,7 @@ fun ColumnScope.DrinksList(OrderList: ArrayList<Item>) {
                 Text(text = "Add")
             }
         }
-        Row() {
+        Row(horizontalArrangement = Arrangement.Center) {
             Text(
                 text = "Water 1$",
                 fontSize = 20.sp,
@@ -187,7 +187,7 @@ fun ColumnScope.DrinksList(OrderList: ArrayList<Item>) {
                 Text(text = "Add")
             }
         }
-        Row() {
+        Row(horizontalArrangement = Arrangement.Center) {
             Text(
                 text = "Ice Tea 1$",
                 fontSize = 20.sp,
@@ -205,7 +205,7 @@ fun ColumnScope.DrinksList(OrderList: ArrayList<Item>) {
                 Text(text = "Add")
             }
         }
-        Row() {
+        Row(horizontalArrangement = Arrangement.Center) {
             Text(
                 text = "Beer 2$",
                 fontSize = 20.sp,
